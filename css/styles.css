@@ -404,7 +404,7 @@ svg {
   margin-bottom: 50px;
 }
 
-.section-button .item + .item {
+.section-button__item + .section-button__item {
   margin-left: 8px;
 }
 
@@ -416,13 +416,13 @@ svg {
   margin-top: calc(-1 * var(--portfolio-work-gap));
 }
 
-.portfolio-work > .item {
+.portfolio-work > .portfolio-work__item {
   flex-basis: calc(100% / 3 - 30px);
   margin-left: var(--portfolio-work-gap);
   margin-top: var(--portfolio-work-gap);
 }
 
-.overlay {
+.portfolio__title {
   display: block;
   align-items: center;
   width: 100%;
@@ -447,16 +447,16 @@ svg {
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.item-overlay {
+.overlay {
   position: relative;
   overflow: hidden;
 }
 
-.portfolio-work .item:hover .overlay {
+.portfolio-work__item:hover .portfolio__title {
   transform: translateY(0);
 }
 
-.project {
+.card-content__title {
   margin-bottom: 4px;
   margin-top: 0px;
   color: var(--primary-text-color);
@@ -466,7 +466,7 @@ svg {
   line-height: 2;
 }
 
-.work {
+.card-content__text {
   margin-top: 0px;
   margin-bottom: 0px;
 
@@ -486,7 +486,7 @@ svg {
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.portfolio-work .item:hover {
+.portfolio-work__item:hover {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
@@ -513,7 +513,7 @@ svg {
   color: var(--accent-color);
 }
 
-.logos {
+.logo__items {
   color: var(--white-color);
 
   font-family: Oleo Script, sans-serif;
@@ -534,7 +534,7 @@ svg {
   margin-top: 20px;
 }
 
-.contact-address .item + .item {
+.contact-address__item + .contact-address__item {
   margin-top: 9px;
 }
 
@@ -569,12 +569,12 @@ svg {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.section-cliens .item + .item {
+.section-cliens__item + .section-cliens__item {
   margin-left: 30px;
 }
 
-.section-cliens .cliens:hover,
-.section-cliens .cliens:focus {
+.cliens:hover,
+.cliens:focus {
   fill: var(--accent-color);
   border: 1px solid var(--accent-color);
 }
@@ -585,7 +585,7 @@ svg {
   align-items: center;
 }
 
-.contact-icon {
+.icon__contact {
   display: flex;
   width: 44px;
   height: 44px;
@@ -601,12 +601,12 @@ svg {
     background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.icon .item + .item {
+.icon__item + .icon__item {
   margin-left: 10px;
 }
 
-.icon .contact-icon:hover,
-.icon .contact-icon:focus {
+.icon__contact:hover,
+.icon__contact:focus {
   fill: var(--white-color);
   background-color: var(--accent-color);
 }
@@ -617,8 +617,11 @@ svg {
   justify-content: center;
 }
 
-.sotial .text,
-.input .text {
+.sotial__text,
+.input__text {
+  display: block;
+  margin-top: 0px;
+  margin-bottom: 0px;
   color: var(--white-color);
   font-weight: bold;
   font-size: 14px;
@@ -627,7 +630,15 @@ svg {
   text-transform: uppercase;
 }
 
-.sotial .contact-icon {
+.icon__contact-footer {
+  display: flex;
+  width: 44px;
+  height: 44px;
+  margin-top: 16px;
+  padding: 12px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
   fill: var(--white-color);
   background-color: rgba(255, 255, 255, 0.1);
 
@@ -635,14 +646,10 @@ svg {
     background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.sotial .contact-icon:hover,
-.sotial .contact-icon:focus {
+.icon__contact-footer:hover,
+.icon__contact-footer:focus {
   fill: var(--white-color);
   background: var(--accent-color);
-}
-
-.sotial .text {
-  display: block;
 }
 
 .sotial {
@@ -661,7 +668,7 @@ svg {
   align-items: center;
 }
 
-.input {
+.subscribe {
   margin-left: 93px;
   margin-top: 12px;
   margin-bottom: 34px;
@@ -669,7 +676,7 @@ svg {
   width: 570px;
 }
 
-.subscribe {
+.input-subscribe {
   width: 358px;
   height: 50px;
   margin-top: 20px;
@@ -705,7 +712,7 @@ svg {
   border-radius: 4px;
 }
 
-.icon-send {
+.button-subscribe__icon-send {
   margin-left: 10px;
 }
 
@@ -716,7 +723,7 @@ svg {
   background-color: var(--background-button);
 }
 
-.container .addres {
+.container__addres {
   flex-direction: column;
 }
 
@@ -781,7 +788,7 @@ svg {
   fill: var(--accent-color);
 }
 
-.form-name {
+.modal__text {
   font-weight: bold;
   font-size: 20px;
   line-height: 1.15;
@@ -799,7 +806,7 @@ svg {
   margin-bottom: 10px;
 }
 
-.label-field {
+.form-field__label {
   position: relative;
   font-family: inherit;
   font-size: 12px;
@@ -808,7 +815,7 @@ svg {
   color: var(--title-text-color);
 }
 
-.input-field {
+.form-field__input {
   font-family: inherit;
   letter-spacing: 0.01em;
   color: var(--title-text-color);
@@ -822,16 +829,16 @@ svg {
   transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.input-field:focus {
+.form-field__input:focus {
   border: 1px solid var(--accent-color);
   outline: none;
 }
 
-.input-field:focus + .icon-field {
+.form-field__input:focus + .form-field__icon {
   fill: var(--accent-color);
 }
 
-.icon-field {
+.form-field__icon {
   display: block;
   position: absolute;
   top: 50%;
@@ -841,7 +848,7 @@ svg {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.feedback-field {
+.form-field__feedback {
   display: block;
   font-family: inherit;
   letter-spacing: 0.01em;
@@ -855,15 +862,15 @@ svg {
   resize: none;
 }
 
-.feedback-field:focus {
+.form-field__feedback:focus {
   border: 1px solid var(--accent-color);
 }
 
-.feedback-field::placeholder {
+.form-field__feedback::placeholder {
   color: rgba(117, 117, 117, 0, 5);
 }
 
-.label-check {
+.form-field__label-check {
   display: flex;
   align-items: center;
   font-family: inherit;
@@ -877,11 +884,11 @@ svg {
   margin-bottom: 30px;
 }
 
-.check-field-contract {
+.form-field__check-contract {
   color: var(--accent-color);
 }
 
-.check-field {
+.form-field__input-check {
   display: block;
   position: absolute;
   width: 1px;
@@ -893,7 +900,7 @@ svg {
   overflow: hidden;
 }
 
-.icon-box {
+.form-field__icon-box {
   display: inline-block;
   position: absolute;
   margin-left: -24px;
@@ -901,7 +908,7 @@ svg {
   height: 15px;
 }
 
-.check-field:checked + .icon-box {
+.form-field__input-check:checked + .form-field__icon-box {
   background-image: url('../images/icon-check.svg');
   background-size: contain;
   background-position: center;
@@ -913,7 +920,7 @@ svg {
   fill: var(--accent-color);
 }
 
-.check-field:focus + .icon-box {
+.form-field__input-check:focus + .form-field__icon-box {
   outline: 1px solid var(--accent-color);
 }
 
