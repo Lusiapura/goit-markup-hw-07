@@ -1,3 +1,5 @@
+@import './utils/variables';
+
 //Base
 @import './base/base-styles';
 @import './base/reset';
@@ -17,4 +19,3 @@
 @import './layout/page-header';
 
 //Utils
-@import './utils/variables';

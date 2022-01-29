@@ -124,8 +124,8 @@
   display: flex;
   flex-wrap: wrap;
 
-  margin-left: calc(-1 * $portfolio-work-gap);
-  margin-top: calc(-1 * $portfolio-work-gap);
+  margin-left: calc(-1 * 30px);
+  margin-top: calc(-1 * 30px);
 }
 
 .portfolio-work > .portfolio-work__item {
@@ -335,7 +335,7 @@
   margin-left: auto;
   margin-right: auto;
   text-align: center;
-  background-color: $background-hero;
+  background-color: $background-button;
 }
 
 .container__addres {
