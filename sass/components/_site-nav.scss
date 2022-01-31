@@ -15,23 +15,21 @@
   color: $primary-text-color;
 
   text-decoration: none;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.17;
+  @include fontMix(14px, 1.17, 500);
 
   position: relative;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-   
-   &:hover,
-   &:focus {
-   color: $accent-color;
-   }
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
 }
 
 .site-nav__link.current {
   color: $accent-color;
 
-    &::after {
+  &::after {
     display: inline-block;
     content: '';
     width: 100%;
@@ -42,5 +40,5 @@
     position: absolute;
     bottom: 0;
     right: 0;
-    }
+  }
 }

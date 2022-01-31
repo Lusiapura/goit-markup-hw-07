@@ -15,3 +15,15 @@ $backdrop-color: #00000033;
 $form-text-color: #75757580;
 $timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 $timing-duraction: 250ms;
+
+@mixin centered-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin fontMix($font-size, $line-height, $font-weight: 400) {
+  font-size: $font-size;
+  line-height: $line-height;
+  font-weight: $font-weight;
+}

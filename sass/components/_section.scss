@@ -4,9 +4,7 @@
 
   color: $primary-text-color;
 
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.17;
+  @include fontMix(36px, 1.17, 700);
   text-align: center;
 }
 
@@ -16,9 +14,7 @@
 
   color: $primary-text-color;
 
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.17;
+  @include fontMix(14px, 1.17, 700);
 }
 
 .section-feature__text {
@@ -58,9 +54,7 @@
   color: $white-color;
   background-color: $text-works;
 
-  font-weight: bold;
-  font-size: 14px;
-  line-height: 1.14;
+  @include fontMix(14px, 1.14, 700);
   text-align: center;
   letter-spacing: 0.03em;
   text-transform: uppercase;
@@ -99,15 +93,12 @@
 
 .card-box__title {
   color: $primary-text-color;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.17;
+  @include fontMix(16px, 1.17, 500);
 }
 
 .card-box__text {
   color: $title-text-color;
-  font-size: 16px;
-  line-height: 1.17;
+  @include fontMix(16px, 1.17);
 }
 
 .section-button {
@@ -147,8 +138,7 @@
 
   color: $white-color;
   background-color: #2196f3e5;
-  font-size: 18px;
-  line-height: 1.56;
+  @include fontMix(18px, 1.56);
   letter-spacing: 0.03em;
 
   position: absolute;
@@ -173,9 +163,7 @@
   margin-top: 0px;
   color: $primary-text-color;
 
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 2;
+  @include fontMix(18px, 2, 700);
 }
 
 .card-content__text {
@@ -184,6 +172,7 @@
 
   color: $title-text-color;
 
+  @include fontMix(16px, 1.88, 400);
   font-size: 16px;
   line-height: 1.88;
 }
@@ -213,7 +202,7 @@
 
 .address {
   display: flex;
-  color: var(--address--);
+  color: $address;
   text-decoration: none;
   width: 231px;
 
@@ -234,9 +223,7 @@
 }
 
 .item-feature {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include centered-content;
   margin-bottom: 30px;
   height: 120px;
   width: 270px;
@@ -246,9 +233,7 @@
 }
 
 .section-cliens {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include centered-content;
 }
 
 .cliens {
@@ -280,9 +265,7 @@
   margin-top: 0px;
   margin-bottom: 0px;
   color: $white-color;
-  font-weight: bold;
-  font-size: 14px;
-  line-height: 1.14;
+  @include fontMix(14px, 1.14, 700);
   letter-spacing: 0.03em;
   text-transform: uppercase;
 }
@@ -302,9 +285,7 @@
 }
 
 .form-subscribe {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include centered-content;
 }
 
 .subscribe {
@@ -323,8 +304,7 @@
   border: 1px solid rgba(255, 255, 255, 0.3);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
-  font-size: 16px;
-  line-height: 1.25;
+  @include fontMix(16px, 1.25);
   align-items: center;
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);

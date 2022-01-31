@@ -37,9 +37,7 @@
 }
 
 .modal__text {
-  font-weight: bold;
-  font-size: 20px;
-  line-height: 1.15;
+  @include fontMix(20px, 1.15, 700);
   text-align: center;
   letter-spacing: 0.03em;
   color: $primary-text-color;
@@ -57,8 +55,7 @@
 .form-field__label {
   position: relative;
   font-family: inherit;
-  font-size: 12px;
-  line-height: 1.17;
+  @include fontMix(12px, 1.17);
   letter-spacing: 0.01em;
 }
 
@@ -121,10 +118,8 @@
   display: flex;
   align-items: center;
   font-family: inherit;
-  font-size: 14px;
-  line-height: 1.71;
+  @include fontMix(14px, 1.71);
   letter-spacing: 0.03em;
-  text-align: center;
   color: $title-text-color;
   padding-left: 36px;
   margin-top: 20px;

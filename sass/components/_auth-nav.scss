@@ -6,17 +6,13 @@
 }
 
 .auth-nav__link {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @include centered-content;
   color: $title-text-color;
   fill: $title-text-color;
   text-decoration: none;
   cursor: pointer;
 
-  font-size: 14px;
-  line-height: 1.14;
-  font-weight: 500;
+  @include fontMix(14px, 1.14, 500);
   font-style: normal;
   letter-spacing: 0.02em;
 

@@ -1,7 +1,6 @@
-.icon {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.icon,
+.icon-footer {
+  @include centered-content;
 }
 
 .icon__contact {
@@ -28,12 +27,6 @@
 
 .icon__item + .icon__item {
   margin-left: 10px;
-}
-
-.icon-footer {
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .icon__contact-footer {
